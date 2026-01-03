@@ -20,12 +20,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*jm*c0rw^fx7g8o$*%5jqad&ac%kjshazjgyi+m6_)%x5q2(%%'
+# SECRET_KEY = 'django-insecure-*jm*c0rw^fx7g8o$*%5jqad&ac%kjshazjgyi+m6_)%x5q2(%%' # Untuk Development
+SECRET_KEY = 'django-insecure-*jm*c0rw^fx7g8o$*%5jqad&ac%kjshazjgyi+m6_)%x5q2(00' # Untuk Production/Deploy
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True # Untuk Development
+DEBUG = False # Untuk Production/Deploy
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = [] # Untuk Development
+ALLOWED_HOSTS = [
+    ".onrender.com",
+    "localhost",
+    "127.0.0.1"
+] # Untuk Production/Deploy
 
 
 # Application definition
